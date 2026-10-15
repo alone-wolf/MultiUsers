@@ -1,0 +1,8 @@
+ktlint 1.8.0（ktlint-cli-1.8.0-all.jar，OpenJDK 21.0.11）
+
+$ ktlint --format    # 格式化全部 *.kt / *.kts
+$ ktlint             # 校验，本次输出为空 → 0 issues，exit 0
+
+结果：No issues found.
+范围：25 个 Kotlin 文件（20 个 .kt + 5 个 .kts）；含 20 个通配导入展开、3 处超长行拆分。
+配置：.editorconfig（indent 4 / max_line_length 140 / ktlint_function_naming_ignore_when_annotated_with = Composable）。

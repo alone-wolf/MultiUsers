@@ -1,0 +1,124 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :domain:processResources NO-SOURCE
+> Task :root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :root:processResources NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :migration:preBuild UP-TO-DATE
+> Task :migration:preDebugBuild UP-TO-DATE
+> Task :migration:writeDebugAarMetadata
+> Task :system:preBuild UP-TO-DATE
+> Task :system:preDebugBuild UP-TO-DATE
+> Task :system:writeDebugAarMetadata
+> Task :domain:compileKotlin
+> Task :domain:compileJava NO-SOURCE
+> Task :domain:classes UP-TO-DATE
+> Task :app:checkDebugAarMetadata
+> Task :domain:jar
+> Task :root:compileKotlin
+> Task :root:compileJava NO-SOURCE
+> Task :root:classes UP-TO-DATE
+> Task :root:jar
+> Task :app:generateDebugResValues
+> Task :migration:generateDebugResValues
+> Task :migration:generateDebugResources
+> Task :migration:packageDebugResources
+> Task :system:generateDebugResValues
+> Task :system:generateDebugResources
+> Task :system:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :migration:extractDeepLinksDebug
+> Task :app:mergeDebugResources
+> Task :system:extractDeepLinksDebug
+> Task :migration:processDebugManifest
+> Task :system:processDebugManifest
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :migration:compileDebugLibraryResources
+> Task :migration:parseDebugLocalResources
+> Task :system:compileDebugLibraryResources
+> Task :system:parseDebugLocalResources
+> Task :system:generateDebugRFile
+> Task :migration:generateDebugRFile
+> Task :migration:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :system:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:processDebugResources
+> Task :system:javaPreCompileDebug
+> Task :migration:javaPreCompileDebug
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :migration:mergeDebugShaders
+> Task :migration:compileDebugShaders NO-SOURCE
+> Task :migration:generateDebugAssets UP-TO-DATE
+> Task :migration:mergeDebugAssets
+> Task :system:mergeDebugShaders
+> Task :system:compileDebugShaders NO-SOURCE
+> Task :system:generateDebugAssets UP-TO-DATE
+> Task :system:mergeDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :system:compileDebugKotlin
+> Task :system:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :system:bundleLibRuntimeToJarDebug
+> Task :system:bundleLibCompileToJarDebug
+> Task :system:processDebugJavaRes
+> Task :migration:compileDebugKotlin
+> Task :migration:compileDebugJavaWithJavac NO-SOURCE
+> Task :migration:bundleLibCompileToJarDebug
+> Task :app:mergeExtDexDebug
+> Task :migration:bundleLibRuntimeToJarDebug
+> Task :migration:processDebugJavaRes
+> Task :migration:bundleLibRuntimeToDirDebug
+> Task :system:bundleLibRuntimeToDirDebug
+> Task :app:mergeLibDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :migration:mergeDebugJniLibFolders
+> Task :migration:mergeDebugNativeLibs NO-SOURCE
+> Task :migration:copyDebugJniLibsProjectOnly
+> Task :system:mergeDebugJniLibFolders
+> Task :system:mergeDebugNativeLibs NO-SOURCE
+> Task :system:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :fixture:preBuild UP-TO-DATE
+> Task :fixture:preDebugBuild UP-TO-DATE
+> Task :fixture:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :fixture:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :fixture:checkDebugAarMetadata
+> Task :fixture:generateDebugResValues
+> Task :fixture:mapDebugSourceSetPaths
+> Task :fixture:generateDebugResources
+> Task :fixture:mergeDebugResources
+> Task :fixture:packageDebugResources
+> Task :fixture:parseDebugLocalResources
+> Task :fixture:createDebugCompatibleScreenManifests
+> Task :fixture:extractDeepLinksDebug
+> Task :fixture:processDebugMainManifest
+> Task :fixture:processDebugManifest
+> Task :fixture:processDebugManifestForPackage
+> Task :fixture:processDebugResources
+
+> Task :app:compileDebugKotlin FAILED
+e: file:///workspace/scratch/3ab51e25495a/MultiUsers/app/src/main/java/top/writerpass/multiusers/MainActivity.kt:66:79 Unresolved reference 'user卸载'.
+
+> Task :fixture:compileDebugKotlin

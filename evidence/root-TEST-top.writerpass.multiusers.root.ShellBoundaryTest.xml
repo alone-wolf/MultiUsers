@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="top.writerpass.multiusers.root.ShellBoundaryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-14T15:11:16.970Z" hostname="WPMBP16.local" time="0.059">
+  <properties/>
+  <testcase name="untrustedNamesRemainSingleLiteralArgument" classname="top.writerpass.multiusers.root.ShellBoundaryTest" time="0.051"/>
+  <testcase name="namespaceNoteReportsEveryUserFact" classname="top.writerpass.multiusers.root.ShellBoundaryTest" time="0.004"/>
+  <testcase name="rootErrorPreservesExitAndDiagnostic" classname="top.writerpass.multiusers.root.ShellBoundaryTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

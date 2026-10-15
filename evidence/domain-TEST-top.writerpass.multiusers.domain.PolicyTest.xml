@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="top.writerpass.multiusers.domain.PolicyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-14T15:11:14.853Z" hostname="WPMBP16.local" time="0.013">
+  <properties/>
+  <testcase name="rejectsTraversalAndInjection" classname="top.writerpass.multiusers.domain.PolicyTest" time="0.007"/>
+  <testcase name="protectsCurrentAndOwner" classname="top.writerpass.multiusers.domain.PolicyTest" time="0.001"/>
+  <testcase name="shellQuoteIsLiteral" classname="top.writerpass.multiusers.domain.PolicyTest" time="0.004"/>
+  <testcase name="profileCannotSwitch" classname="top.writerpass.multiusers.domain.PolicyTest" time="0.0"/>
+  <testcase name="copyCannotTargetSource" classname="top.writerpass.multiusers.domain.PolicyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,14 @@
+test_apk_change_blocks_restore (__main__.EngineTests.test_apk_change_blocks_restore) ... ok
+test_copy_then_recovery (__main__.EngineTests.test_copy_then_recovery) ... ok
+test_corrupt_backup_blocks_restore (__main__.EngineTests.test_corrupt_backup_blocks_restore) ... ok
+test_failed_write_retains_snapshot_then_recovers (__main__.EngineTests.test_failed_write_retains_snapshot_then_recovers) ... ok
+test_locked_user_rejected (__main__.EngineTests.test_locked_user_rejected) ... ok
+test_prewrite_failure_restores_enabled_without_overwrite (__main__.EngineTests.test_prewrite_failure_restores_enabled_without_overwrite) ... ok
+test_reused_user_id_blocks_recovery (__main__.EngineTests.test_reused_user_id_blocks_recovery) ... ok
+test_shared_uid_rejected (__main__.EngineTests.test_shared_uid_rejected) ... ok
+test_symlink_rejected_and_source_enabled_restored (__main__.EngineTests.test_symlink_rejected_and_source_enabled_restored) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 19.813s
+
+OK

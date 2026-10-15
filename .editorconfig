@@ -1,0 +1,21 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{kt,kts}]
+max_line_length = 140
+ij_kotlin_code_style_defaults = KOTLIN_OFFICIAL
+# Compose 组合函数按官方约定使用 PascalCase（MultiUsersScreen、UserPicker）。
+ktlint_function_naming_ignore_when_annotated_with = Composable
+
+[*.{xml,json,toml,properties,yml,yaml,sh}]
+indent_size = 2
+
+[*.sh]
+indent_style = space

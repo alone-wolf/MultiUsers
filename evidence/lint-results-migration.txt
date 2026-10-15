@@ -1,0 +1,14 @@
+/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/root/src/main/kotlin/top/writerpass/multiusers/root/RootExecutor.kt:39: Warning: Do not hardcode "/data/"; use Context.getFilesDir().getPath() instead [SdCardPath]
+        "[ -e \"/data/user/\$u\" ] && echo \"OK \$u(\$s)\" || echo \"NO \$u(\$s)\"; done"
+                ~~~~~~~~~~~
+
+   Explanation for issues of type "SdCardPath":
+   Your code should not reference the /sdcard path directly; instead use
+   Environment.getExternalStorageDirectory().getPath().
+
+   Similarly, do not reference the /data/data/ path directly; it can vary in
+   multi-user scenarios. Instead, use Context.getFilesDir().getPath().
+
+   https://developer.android.com/training/data-storage#filesExternal
+
+0 errors, 1 warning

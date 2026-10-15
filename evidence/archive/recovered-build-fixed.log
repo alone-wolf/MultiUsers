@@ -1,0 +1,265 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :domain:compileKotlin UP-TO-DATE
+> Task :domain:compileJava NO-SOURCE
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes UP-TO-DATE
+> Task :domain:jar UP-TO-DATE
+> Task :root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :root:processResources NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :migration:preBuild UP-TO-DATE
+> Task :migration:preDebugBuild UP-TO-DATE
+> Task :migration:writeDebugAarMetadata UP-TO-DATE
+> Task :system:preBuild UP-TO-DATE
+> Task :system:preDebugBuild UP-TO-DATE
+> Task :system:writeDebugAarMetadata UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :migration:generateDebugResValues UP-TO-DATE
+> Task :migration:generateDebugResources UP-TO-DATE
+> Task :migration:packageDebugResources UP-TO-DATE
+> Task :system:generateDebugResValues UP-TO-DATE
+> Task :system:generateDebugResources UP-TO-DATE
+> Task :system:packageDebugResources UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :migration:extractDeepLinksDebug UP-TO-DATE
+> Task :migration:processDebugManifest UP-TO-DATE
+> Task :system:extractDeepLinksDebug UP-TO-DATE
+> Task :system:processDebugManifest UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :migration:compileDebugLibraryResources UP-TO-DATE
+> Task :migration:parseDebugLocalResources UP-TO-DATE
+> Task :migration:generateDebugRFile UP-TO-DATE
+> Task :system:compileDebugLibraryResources UP-TO-DATE
+> Task :system:parseDebugLocalResources UP-TO-DATE
+> Task :system:generateDebugRFile UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :migration:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :system:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :system:javaPreCompileDebug UP-TO-DATE
+> Task :migration:javaPreCompileDebug UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :migration:mergeDebugShaders UP-TO-DATE
+> Task :migration:compileDebugShaders NO-SOURCE
+> Task :migration:generateDebugAssets UP-TO-DATE
+> Task :migration:mergeDebugAssets UP-TO-DATE
+> Task :system:mergeDebugShaders UP-TO-DATE
+> Task :system:compileDebugShaders NO-SOURCE
+> Task :system:generateDebugAssets UP-TO-DATE
+> Task :system:mergeDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :migration:mergeDebugJniLibFolders UP-TO-DATE
+> Task :migration:mergeDebugNativeLibs NO-SOURCE
+> Task :migration:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :system:mergeDebugJniLibFolders UP-TO-DATE
+> Task :system:mergeDebugNativeLibs NO-SOURCE
+> Task :system:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :fixture:preBuild UP-TO-DATE
+> Task :fixture:preDebugBuild UP-TO-DATE
+> Task :fixture:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :fixture:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :fixture:checkDebugAarMetadata UP-TO-DATE
+> Task :fixture:generateDebugResValues UP-TO-DATE
+> Task :fixture:mapDebugSourceSetPaths UP-TO-DATE
+> Task :fixture:generateDebugResources UP-TO-DATE
+> Task :fixture:mergeDebugResources UP-TO-DATE
+> Task :fixture:packageDebugResources UP-TO-DATE
+> Task :fixture:parseDebugLocalResources UP-TO-DATE
+> Task :fixture:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :fixture:extractDeepLinksDebug UP-TO-DATE
+> Task :fixture:processDebugMainManifest UP-TO-DATE
+> Task :fixture:processDebugManifest UP-TO-DATE
+> Task :fixture:processDebugManifestForPackage UP-TO-DATE
+> Task :fixture:processDebugResources UP-TO-DATE
+> Task :fixture:compileDebugKotlin UP-TO-DATE
+> Task :fixture:javaPreCompileDebug
+> Task :fixture:compileDebugJavaWithJavac NO-SOURCE
+> Task :fixture:mergeDebugShaders
+> Task :fixture:compileDebugShaders NO-SOURCE
+> Task :fixture:generateDebugAssets UP-TO-DATE
+> Task :fixture:mergeDebugAssets
+> Task :fixture:compressDebugAssets
+> Task :fixture:desugarDebugFileDependencies
+> Task :fixture:dexBuilderDebug
+> Task :fixture:mergeDebugGlobalSynthetics
+> Task :fixture:processDebugJavaRes
+> Task :fixture:mergeDebugJavaResource
+> Task :fixture:checkDebugDuplicateClasses
+> Task :fixture:mergeExtDexDebug
+> Task :fixture:mergeLibDexDebug
+> Task :fixture:mergeProjectDexDebug
+> Task :fixture:mergeDebugJniLibFolders
+> Task :fixture:mergeDebugNativeLibs NO-SOURCE
+> Task :fixture:stripDebugDebugSymbols NO-SOURCE
+> Task :fixture:validateSigningDebug
+> Task :fixture:writeDebugAppMetadata
+> Task :fixture:writeDebugSigningConfigVersions
+> Task :fixture:packageDebug
+> Task :fixture:createDebugApkListingFileRedirect
+> Task :fixture:assembleDebug
+> Task :root:compileKotlin
+> Task :root:compileJava NO-SOURCE
+> Task :root:classes UP-TO-DATE
+> Task :root:jar
+> Task :system:compileDebugKotlin
+> Task :system:compileDebugJavaWithJavac NO-SOURCE
+> Task :system:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :migration:compileDebugKotlin
+> Task :migration:compileDebugJavaWithJavac NO-SOURCE
+> Task :migration:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :domain:compileTestKotlin
+> Task :migration:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :system:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :migration:processDebugJavaRes UP-TO-DATE
+> Task :system:processDebugJavaRes UP-TO-DATE
+> Task :migration:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :system:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+> Task :domain:compileTestJava NO-SOURCE
+> Task :domain:processTestResources NO-SOURCE
+> Task :domain:testClasses UP-TO-DATE
+> Task :domain:test
+> Task :root:compileTestKotlin
+> Task :root:compileTestJava NO-SOURCE
+> Task :root:processTestResources NO-SOURCE
+> Task :root:testClasses UP-TO-DATE
+> Task :root:test
+> Task :system:preDebugUnitTestBuild UP-TO-DATE
+> Task :system:generateDebugUnitTestStubRFile
+> Task :system:compileDebugUnitTestKotlin
+> Task :system:javaPreCompileDebugUnitTest
+> Task :system:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :system:processDebugUnitTestJavaRes
+> Task :system:testDebugUnitTest
+> Task :system:stripDebugDebugSymbols NO-SOURCE
+> Task :system:copyDebugJniLibsProjectAndLocalJars
+> Task :app:compileDebugKotlin
+> Task :system:extractDebugAnnotations
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:mergeProjectDexDebug
+> Task :system:extractDeepLinksForAarDebug
+> Task :system:mergeDebugGeneratedProguardFiles
+> Task :system:mergeDebugConsumerProguardFiles
+> Task :system:prepareDebugArtProfile
+> Task :system:prepareLintJarForPublish
+> Task :system:mergeDebugJavaResource
+> Task :system:syncDebugLibJars
+> Task :system:bundleDebugLocalLintAar
+> Task :migration:stripDebugDebugSymbols NO-SOURCE
+> Task :migration:copyDebugJniLibsProjectAndLocalJars
+> Task :migration:extractDebugAnnotations
+> Task :migration:extractDeepLinksForAarDebug
+> Task :migration:mergeDebugGeneratedProguardFiles
+> Task :migration:mergeDebugConsumerProguardFiles
+> Task :migration:prepareDebugArtProfile
+> Task :migration:prepareLintJarForPublish
+> Task :migration:mergeDebugJavaResource
+> Task :migration:syncDebugLibJars
+> Task :migration:bundleDebugLocalLintAar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:generateDebugAndroidTestResValues
+> Task :migration:createFullJarDebug
+> Task :migration:writeDebugLintModelMetadata
+> Task :system:createFullJarDebug
+> Task :system:writeDebugLintModelMetadata
+> Task :app:mergeDebugJavaResource
+> Task :app:generateDebugAndroidTestLintModel
+> Task :app:extractProguardFiles
+> Task :migration:extractProguardFiles
+> Task :system:extractProguardFiles
+> Task :system:generateDebugLintModel
+> Task :migration:generateDebugLintModel
+> Task :app:generateDebugLintReportModel
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:generateDebugUnitTestLintModel
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebugUnitTest
+> Task :migration:preDebugAndroidTestBuild UP-TO-DATE
+> Task :migration:generateDebugAndroidTestResValues
+> Task :migration:generateDebugAndroidTestLintModel
+> Task :migration:preDebugUnitTestBuild UP-TO-DATE
+> Task :migration:generateDebugUnitTestLintModel
+> Task :migration:lintAnalyzeDebugAndroidTest
+> Task :migration:lintAnalyzeDebugUnitTest
+> Task :system:preDebugAndroidTestBuild UP-TO-DATE
+> Task :system:generateDebugAndroidTestResValues
+> Task :system:generateDebugAndroidTestLintModel
+> Task :system:generateDebugUnitTestLintModel
+> Task :system:lintAnalyzeDebugAndroidTest
+> Task :system:lintAnalyzeDebugUnitTest
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:generateDebugAndroidTestResources
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:processDebugAndroidTestManifest
+> Task :app:processDebugAndroidTestResources
+> Task :app:compileDebugAndroidTestKotlin
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :app:mergeDebugAndroidTestShaders
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:processDebugAndroidTestJavaRes
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+> Task :system:lintAnalyzeDebug
+> Task :migration:lintAnalyzeDebug
+> Task :app:lintAnalyzeDebug
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///workspace/scratch/3ab51e25495a/MultiUsers/app/build/reports/lint-results-debug.html
+
+> Task :app:lintDebug
+w: Detected multiple Kotlin daemon sessions at 
+
+BUILD SUCCESSFUL in 2m 35s
+195 actionable tasks: 117 executed, 78 up-to-date

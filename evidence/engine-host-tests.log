@@ -1,0 +1,167 @@
+test_apk_change_blocks_restore (__main__.EngineTests.test_apk_change_blocks_restore) ... FAIL
+test_copy_then_recovery (__main__.EngineTests.test_copy_then_recovery) ... FAIL
+test_corrupt_backup_blocks_restore (__main__.EngineTests.test_corrupt_backup_blocks_restore) ... FAIL
+test_failed_write_retains_snapshot_then_recovers (__main__.EngineTests.test_failed_write_retains_snapshot_then_recovers) ... FAIL
+test_locked_user_rejected (__main__.EngineTests.test_locked_user_rejected) ... FAIL
+test_missing_source_data_is_named (__main__.EngineTests.test_missing_source_data_is_named) ... FAIL
+test_missing_target_data_is_named (__main__.EngineTests.test_missing_target_data_is_named) ... FAIL
+test_prewrite_failure_restores_enabled_without_overwrite (__main__.EngineTests.test_prewrite_failure_restores_enabled_without_overwrite) ... FAIL
+test_reused_user_id_blocks_recovery (__main__.EngineTests.test_reused_user_id_blocks_recovery) ... FAIL
+test_shared_uid_rejected (__main__.EngineTests.test_shared_uid_rejected) ... FAIL
+test_symlink_rejected_and_source_enabled_restored (__main__.EngineTests.test_symlink_rejected_and_source_enabled_restored) ... FAIL
+
+======================================================================
+FAIL: test_apk_change_blocks_restore (__main__.EngineTests.test_apk_change_blocks_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 83, in test_apk_change_blocks_restore
+    id=self.run_engine('backup');(self.root/'apk/base.apk').write_text('updated');target=self.seed(10);self.run_engine('restore',id,False,expect='APK changed; restore blocked');self.assertEqual(target,self.seed(10))
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 56, in run_engine
+    if ok:self.assertEqual(r.returncode,0,text)
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmp1rv285z0/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_copy_then_recovery (__main__.EngineTests.test_copy_then_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 63, in test_copy_then_recovery
+    original=self.seed(10);source=self.seed(0);id=self.run_engine('copy');self.assertEqual(self.seed(10),source);self.assertEqual(self.seed(0),source);self.run_engine('verify',id);self.run_engine('recover',id);self.assertEqual(self.seed(10),original);self.assertEqual(json.loads((self.root/'state.json').read_text())['enabled'],{'0':0,'10':1})
+                                                  ~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 56, in run_engine
+    if ok:self.assertEqual(r.returncode,0,text)
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpftywvfx9/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_corrupt_backup_blocks_restore (__main__.EngineTests.test_corrupt_backup_blocks_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 65, in test_corrupt_backup_blocks_restore
+    id=self.run_engine('backup');(self.jobs/id/'source/ce.tar').write_bytes(b'bad');target=self.seed(10);self.run_engine('restore',id,False,expect='backup checksum mismatch');self.assertEqual(target,self.seed(10))
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 56, in run_engine
+    if ok:self.assertEqual(r.returncode,0,text)
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmps8ml6s11/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_failed_write_retains_snapshot_then_recovers (__main__.EngineTests.test_failed_write_retains_snapshot_then_recovers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 79, in test_failed_write_retains_snapshot_then_recovers
+    self.state['fail_context']=True;self.write_state();original=self.seed(10);id=self.run_engine('copy',ok=False,expect='WRITING');self.assertTrue((self.jobs/id/'target/COMPLETE').exists());state=json.loads((self.root/'state.json').read_text());self.assertEqual(state['enabled']['10'],3);state['fail_context']=False;(self.root/'state.json').write_text(json.dumps(state));self.run_engine('recover',id);self.assertEqual(self.seed(10),original)
+                                                                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 59, in run_engine
+    if expect:self.assertIn(expect,text,f'engine failed for the wrong reason, expected {expect!r}: {text}')
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'WRITING' not found in '/var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpviuhrg03/engine.sh: line 29: flock: command not found\nERROR: another migration is running\n' : engine failed for the wrong reason, expected 'WRITING': /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpviuhrg03/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_locked_user_rejected (__main__.EngineTests.test_locked_user_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 67, in test_locked_user_rejected
+    self.state['locked']=True;self.write_state();self.run_engine('copy',ok=False,expect='must be running and unlocked');self.assertEqual(self.seed(10),'user-10')
+                                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 59, in run_engine
+    if expect:self.assertIn(expect,text,f'engine failed for the wrong reason, expected {expect!r}: {text}')
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'must be running and unlocked' not found in '/var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpdmyn8zig/engine.sh: line 29: flock: command not found\nERROR: another migration is running\n' : engine failed for the wrong reason, expected 'must be running and unlocked': /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpdmyn8zig/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_missing_source_data_is_named (__main__.EngineTests.test_missing_source_data_is_named)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 70, in test_missing_source_data_is_named
+    self.run_engine('copy',ok=False,expect='data directory unavailable (source user 0)')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 59, in run_engine
+    if expect:self.assertIn(expect,text,f'engine failed for the wrong reason, expected {expect!r}: {text}')
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'data directory unavailable (source user 0)' not found in '/var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpkxs8bxrs/engine.sh: line 29: flock: command not found\nERROR: another migration is running\n' : engine failed for the wrong reason, expected 'data directory unavailable (source user 0)': /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpkxs8bxrs/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_missing_target_data_is_named (__main__.EngineTests.test_missing_target_data_is_named)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 73, in test_missing_target_data_is_named
+    self.run_engine('copy',ok=False,expect='data directory unavailable (target user 10)')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 59, in run_engine
+    if expect:self.assertIn(expect,text,f'engine failed for the wrong reason, expected {expect!r}: {text}')
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'data directory unavailable (target user 10)' not found in '/var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpsjrkllnk/engine.sh: line 29: flock: command not found\nERROR: another migration is running\n' : engine failed for the wrong reason, expected 'data directory unavailable (target user 10)': /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpsjrkllnk/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_prewrite_failure_restores_enabled_without_overwrite (__main__.EngineTests.test_prewrite_failure_restores_enabled_without_overwrite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 85, in test_prewrite_failure_restores_enabled_without_overwrite
+    (self.root/'user/10/test.example/files/link').symlink_to('/etc/passwd');id=self.run_engine('copy',ok=False,expect='symlink/special file unsupported');self.run_engine('recover',id);self.assertEqual(json.loads((self.root/'state.json').read_text())['enabled'],{'0':0,'10':1});self.assertEqual(self.seed(10),'user-10')
+                                                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 59, in run_engine
+    if expect:self.assertIn(expect,text,f'engine failed for the wrong reason, expected {expect!r}: {text}')
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'symlink/special file unsupported' not found in '/var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpqyntkbhc/engine.sh: line 29: flock: command not found\nERROR: another migration is running\n' : engine failed for the wrong reason, expected 'symlink/special file unsupported': /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmpqyntkbhc/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_reused_user_id_blocks_recovery (__main__.EngineTests.test_reused_user_id_blocks_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 81, in test_reused_user_id_blocks_recovery
+    id=self.run_engine('copy');state=json.loads((self.root/'state.json').read_text());state['serial_offset']=100;(self.root/'state.json').write_text(json.dumps(state));target=self.seed(10);self.run_engine('recover',id,False,expect='source user identity changed');self.assertEqual(target,self.seed(10))
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 56, in run_engine
+    if ok:self.assertEqual(r.returncode,0,text)
+          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmp9b_qz9cy/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_shared_uid_rejected (__main__.EngineTests.test_shared_uid_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 75, in test_shared_uid_rejected
+    self.state['shared']=True;self.write_state();self.run_engine('copy',ok=False,expect='shared UID not supported');self.assertEqual(self.seed(10),'user-10')
+                                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 59, in run_engine
+    if expect:self.assertIn(expect,text,f'engine failed for the wrong reason, expected {expect!r}: {text}')
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'shared UID not supported' not found in '/var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmp5p8pabvp/engine.sh: line 29: flock: command not found\nERROR: another migration is running\n' : engine failed for the wrong reason, expected 'shared UID not supported': /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmp5p8pabvp/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+======================================================================
+FAIL: test_symlink_rejected_and_source_enabled_restored (__main__.EngineTests.test_symlink_rejected_and_source_enabled_restored)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 77, in test_symlink_rejected_and_source_enabled_restored
+    (self.root/'user/0/test.example/files/link').symlink_to('/etc/passwd');self.run_engine('copy',ok=False,expect='symlink/special file unsupported');self.assertEqual(json.loads((self.root/'state.json').read_text())['enabled']['0'],0)
+                                                                           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/tests/test_engine.py", line 59, in run_engine
+    if expect:self.assertIn(expect,text,f'engine failed for the wrong reason, expected {expect!r}: {text}')
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'symlink/special file unsupported' not found in '/var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmp5eutbgut/engine.sh: line 29: flock: command not found\nERROR: another migration is running\n' : engine failed for the wrong reason, expected 'symlink/special file unsupported': /var/folders/df/3k9sfvz52bg34b__mmqg0kz00000gn/T/tmp5eutbgut/engine.sh: line 29: flock: command not found
+ERROR: another migration is running
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.890s
+
+FAILED (failures=11)

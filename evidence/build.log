@@ -1,0 +1,497 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Shared read-only dependency cache is an incubating feature.
+
+> Configure project :app
+Unable to initialize metrics, ensure /Users/wolf/.android is writable, details: /Users/wolf/.android/analytics.settings (Operation not permitted)
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :domain:clean
+> Task :root:clean
+> Task :migration:clean
+> Task :domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :fixture:clean
+> Task :root:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :root:processResources NO-SOURCE
+> Task :root:processTestResources NO-SOURCE
+> Task :migration:preBuild UP-TO-DATE
+> Task :migration:preDebugBuild UP-TO-DATE
+> Task :system:clean
+> Task :system:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :system:preBuild UP-TO-DATE
+> Task :system:preDebugBuild UP-TO-DATE
+> Task :system:generateDebugResValues FROM-CACHE
+> Task :system:generateDebugResources FROM-CACHE
+> Task :system:packageDebugResources FROM-CACHE
+> Task :app:clean
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :system:parseDebugLocalResources FROM-CACHE
+> Task :app:generateDebugResources FROM-CACHE
+> Task :system:generateDebugRFile FROM-CACHE
+> Task :domain:compileKotlin FROM-CACHE
+> Task :app:packageDebugResources FROM-CACHE
+> Task :system:javaPreCompileDebug FROM-CACHE
+> Task :domain:compileJava NO-SOURCE
+> Task :system:preDebugUnitTestBuild UP-TO-DATE
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes UP-TO-DATE
+> Task :migration:mergeDebugJniLibFolders
+> Task :app:parseDebugLocalResources FROM-CACHE
+> Task :migration:mergeDebugNativeLibs NO-SOURCE
+> Task :migration:stripDebugDebugSymbols NO-SOURCE
+> Task :system:generateDebugUnitTestStubRFile FROM-CACHE
+> Task :system:javaPreCompileDebugUnitTest FROM-CACHE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :migration:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :migration:generateDebugResValues FROM-CACHE
+> Task :migration:copyDebugJniLibsProjectAndLocalJars
+> Task :system:mergeDebugJniLibFolders
+> Task :migration:generateDebugResources FROM-CACHE
+> Task :system:mergeDebugNativeLibs NO-SOURCE
+> Task :system:stripDebugDebugSymbols NO-SOURCE
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :system:copyDebugJniLibsProjectAndLocalJars
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :migration:packageDebugResources FROM-CACHE
+> Task :system:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :app:generateDebugAndroidTestResValues FROM-CACHE
+> Task :system:mergeDebugShaders
+> Task :migration:parseDebugLocalResources FROM-CACHE
+> Task :system:compileDebugShaders NO-SOURCE
+> Task :system:generateDebugAssets UP-TO-DATE
+> Task :migration:generateDebugRFile FROM-CACHE
+> Task :system:mergeDebugAssets
+> Task :system:prepareDebugArtProfile UP-TO-DATE
+> Task :migration:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :system:prepareLintJarForPublish UP-TO-DATE
+> Task :migration:mergeDebugShaders
+> Task :migration:compileDebugShaders NO-SOURCE
+> Task :migration:generateDebugAssets UP-TO-DATE
+> Task :system:processDebugManifest FROM-CACHE
+> Task :domain:jar
+> Task :system:writeDebugAarMetadata
+> Task :migration:mergeDebugAssets
+> Task :domain:compileTestKotlin FROM-CACHE
+> Task :migration:javaPreCompileDebug FROM-CACHE
+> Task :domain:compileTestJava NO-SOURCE
+> Task :migration:prepareDebugArtProfile UP-TO-DATE
+> Task :domain:processTestResources NO-SOURCE
+> Task :domain:testClasses UP-TO-DATE
+> Task :migration:prepareLintJarForPublish UP-TO-DATE
+> Task :migration:processDebugManifest FROM-CACHE
+> Task :root:compileKotlin FROM-CACHE
+> Task :root:compileJava NO-SOURCE
+> Task :root:classes UP-TO-DATE
+> Task :migration:writeDebugAarMetadata
+> Task :migration:extractDeepLinksDebug FROM-CACHE
+> Task :domain:test FROM-CACHE
+> Task :system:extractDeepLinksDebug FROM-CACHE
+> Task :migration:compileDebugLibraryResources FROM-CACHE
+> Task :system:compileDebugLibraryResources FROM-CACHE
+> Task :root:jar
+> Task :domain:writeJvmLintModelMetadata
+> Task :migration:writeDebugLintModelMetadata
+> Task :root:compileTestKotlin FROM-CACHE
+> Task :root:compileTestJava NO-SOURCE
+> Task :root:testClasses UP-TO-DATE
+> Task :root:test FROM-CACHE
+> Task :root:writeJvmLintModelMetadata
+> Task :migration:extractProguardFiles
+> Task :migration:preDebugAndroidTestBuild UP-TO-DATE
+> Task :migration:generateDebugAndroidTestResValues FROM-CACHE
+> Task :migration:preDebugUnitTestBuild UP-TO-DATE
+> Task :domain:generateJvmMainLintModel
+> Task :domain:lintAnalyzeJvmMain FROM-CACHE
+> Task :app:mapDebugSourceSetPaths
+> Task :system:compileDebugKotlin FROM-CACHE
+> Task :root:lintAnalyzeJvmTest FROM-CACHE
+> Task :system:compileDebugJavaWithJavac NO-SOURCE
+> Task :domain:generateJvmTestLintModel
+> Task :root:generateJvmMainLintModel
+> Task :root:lintAnalyzeJvmMain FROM-CACHE
+> Task :system:processDebugJavaRes
+> Task :system:bundleLibRuntimeToJarDebug
+> Task :system:bundleLibCompileToJarDebug
+> Task :app:checkDebugAarMetadata
+> Task :domain:lintAnalyzeJvmTest FROM-CACHE
+> Task :root:generateJvmTestLintModel
+> Task :system:extractDebugAnnotations FROM-CACHE
+> Task :system:compileDebugUnitTestKotlin FROM-CACHE
+> Task :system:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :system:processDebugUnitTestJavaRes
+> Task :system:testDebugUnitTest FROM-CACHE
+> Task :system:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :system:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :app:mergeDebugResources FROM-CACHE
+> Task :migration:compileDebugKotlin FROM-CACHE
+> Task :migration:extractDebugAnnotations FROM-CACHE
+> Task :migration:compileDebugJavaWithJavac NO-SOURCE
+> Task :migration:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :migration:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :migration:processDebugJavaRes
+
+> Task :root:lintReportJvm
+Warning: Unable to initialize metrics, ensure /Users/wolf/.android is writable, details: /Users/wolf/.android/analytics.settings (Operation not permitted)
+
+> Task :domain:lintReportJvm
+> Task :migration:bundleLibCompileToJarDebug
+> Task :migration:bundleLibRuntimeToJarDebug
+> Task :migration:createFullJarDebug
+> Task :system:createFullJarDebug
+> Task :system:writeDebugLintModelMetadata
+> Task :system:extractProguardFiles
+> Task :system:generateDebugLintModel
+> Task :app:processDebugMainManifest FROM-CACHE
+> Task :app:processDebugManifest FROM-CACHE
+> Task :app:processDebugManifestForPackage FROM-CACHE
+> Task :migration:generateDebugLintModel
+> Task :system:mergeDebugJavaResource
+> Task :migration:mergeDebugJavaResource
+> Task :domain:lintJvm UP-TO-DATE
+> Task :domain:lint UP-TO-DATE
+> Task :root:lintJvm UP-TO-DATE
+> Task :root:lint UP-TO-DATE
+> Task :system:lintAnalyzeDebug FROM-CACHE
+> Task :migration:syncDebugLibJars FROM-CACHE
+> Task :system:syncDebugLibJars FROM-CACHE
+> Task :system:bundleDebugLocalLintAar
+> Task :migration:bundleDebugLocalLintAar
+> Task :system:preDebugAndroidTestBuild UP-TO-DATE
+> Task :system:generateDebugAndroidTestResValues FROM-CACHE
+> Task :migration:lintAnalyzeDebug FROM-CACHE
+> Task :fixture:preBuild UP-TO-DATE
+> Task :fixture:preDebugBuild UP-TO-DATE
+> Task :fixture:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :fixture:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :fixture:checkDebugAarMetadata
+> Task :fixture:generateDebugResValues FROM-CACHE
+> Task :fixture:mapDebugSourceSetPaths
+> Task :fixture:generateDebugResources FROM-CACHE
+> Task :system:generateDebugAndroidTestLintModel
+> Task :migration:generateDebugAndroidTestLintModel
+> Task :fixture:mergeDebugResources FROM-CACHE
+> Task :system:generateDebugUnitTestLintModel
+> Task :fixture:packageDebugResources FROM-CACHE
+> Task :fixture:parseDebugLocalResources FROM-CACHE
+> Task :system:lintAnalyzeDebugAndroidTest FROM-CACHE
+> Task :migration:generateDebugUnitTestLintModel
+> Task :fixture:createDebugCompatibleScreenManifests
+> Task :fixture:extractDeepLinksDebug FROM-CACHE
+> Task :system:lintAnalyzeDebugUnitTest FROM-CACHE
+> Task :app:processDebugResources FROM-CACHE
+> Task :migration:lintAnalyzeDebugAndroidTest FROM-CACHE
+> Task :fixture:processDebugMainManifest FROM-CACHE
+> Task :fixture:processDebugManifest FROM-CACHE
+> Task :migration:lintAnalyzeDebugUnitTest FROM-CACHE
+> Task :fixture:processDebugManifestForPackage FROM-CACHE
+> Task :system:generateDebugLintReportModel
+> Task :migration:generateDebugLintReportModel
+> Task :fixture:processDebugResources FROM-CACHE
+> Task :system:bundleLibRuntimeToDirDebug
+> Task :migration:bundleLibRuntimeToDirDebug
+
+> Task :migration:lintReportDebug
+Wrote HTML report to file:///Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/migration/build/reports/lint-results-debug.html
+
+> Task :system:lintReportDebug
+Wrote HTML report to file:///Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/system/build/reports/lint-results-debug.html
+
+> Task :migration:lintDebug
+> Task :system:lintDebug
+> Task :system:copyDebugJniLibsProjectOnly
+> Task :migration:copyDebugJniLibsProjectOnly
+> Task :migration:preReleaseBuild UP-TO-DATE
+> Task :migration:mergeReleaseJniLibFolders
+> Task :system:preReleaseBuild UP-TO-DATE
+> Task :migration:mergeReleaseNativeLibs NO-SOURCE
+> Task :system:mergeReleaseJniLibFolders
+> Task :system:mergeReleaseNativeLibs NO-SOURCE
+> Task :system:copyReleaseJniLibsProjectOnly
+> Task :migration:generateReleaseResValues FROM-CACHE
+> Task :migration:generateReleaseResources FROM-CACHE
+> Task :migration:packageReleaseResources FROM-CACHE
+> Task :migration:parseReleaseLocalResources FROM-CACHE
+> Task :migration:copyReleaseJniLibsProjectOnly
+> Task :system:generateReleaseResValues FROM-CACHE
+> Task :migration:generateReleaseRFile FROM-CACHE
+> Task :system:generateReleaseResources FROM-CACHE
+> Task :migration:javaPreCompileRelease FROM-CACHE
+> Task :fixture:compileDebugKotlin FROM-CACHE
+> Task :system:packageReleaseResources FROM-CACHE
+> Task :fixture:javaPreCompileDebug FROM-CACHE
+> Task :migration:writeReleaseAarMetadata
+> Task :fixture:compileDebugJavaWithJavac NO-SOURCE
+> Task :system:parseReleaseLocalResources FROM-CACHE
+> Task :migration:extractDeepLinksRelease FROM-CACHE
+> Task :system:generateReleaseRFile FROM-CACHE
+> Task :fixture:mergeDebugShaders
+> Task :migration:processReleaseManifest FROM-CACHE
+> Task :fixture:compileDebugShaders NO-SOURCE
+> Task :fixture:generateDebugAssets UP-TO-DATE
+> Task :migration:prepareReleaseArtProfile UP-TO-DATE
+> Task :migration:mergeReleaseShaders
+> Task :fixture:mergeDebugAssets
+> Task :migration:compileReleaseShaders NO-SOURCE
+> Task :migration:generateReleaseAssets UP-TO-DATE
+> Task :fixture:compressDebugAssets FROM-CACHE
+> Task :fixture:desugarDebugFileDependencies FROM-CACHE
+> Task :migration:mergeReleaseAssets
+> Task :migration:stripReleaseDebugSymbols NO-SOURCE
+> Task :system:compileReleaseKotlin FROM-CACHE
+> Task :migration:copyReleaseJniLibsProjectAndLocalJars
+> Task :system:javaPreCompileRelease FROM-CACHE
+> Task :migration:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :system:compileReleaseJavaWithJavac NO-SOURCE
+> Task :domain:lintVitalAnalyzeJvmMain FROM-CACHE
+> Task :system:bundleLibCompileToJarRelease
+> Task :system:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :fixture:dexBuilderDebug FROM-CACHE
+> Task :system:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :migration:writeReleaseLintModelMetadata
+> Task :system:writeReleaseAarMetadata
+> Task :system:extractDeepLinksRelease FROM-CACHE
+> Task :fixture:mergeDebugGlobalSynthetics FROM-CACHE
+> Task :system:processReleaseManifest FROM-CACHE
+> Task :system:prepareReleaseArtProfile UP-TO-DATE
+> Task :fixture:processDebugJavaRes
+> Task :migration:compileReleaseKotlin FROM-CACHE
+> Task :system:bundleLibRuntimeToJarRelease
+> Task :migration:compileReleaseJavaWithJavac NO-SOURCE
+> Task :migration:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :migration:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :migration:bundleLibCompileToJarRelease
+> Task :fixture:checkDebugDuplicateClasses
+> Task :fixture:mergeDebugJniLibFolders
+> Task :migration:bundleLibRuntimeToJarRelease
+> Task :migration:processReleaseJavaRes
+> Task :system:processReleaseJavaRes
+> Task :system:mergeReleaseShaders
+> Task :system:compileReleaseShaders NO-SOURCE
+> Task :system:generateReleaseAssets UP-TO-DATE
+> Task :system:mergeReleaseAssets
+> Task :fixture:mergeExtDexDebug FROM-CACHE
+> Task :migration:createFullJarRelease
+> Task :fixture:mergeLibDexDebug FROM-CACHE
+> Task :system:createFullJarRelease
+> Task :fixture:mergeProjectDexDebug FROM-CACHE
+> Task :system:generateReleaseLintModel
+> Task :fixture:mergeDebugNativeLibs NO-SOURCE
+> Task :fixture:stripDebugDebugSymbols NO-SOURCE
+> Task :fixture:mergeDebugJavaResource
+> Task :system:stripReleaseDebugSymbols NO-SOURCE
+> Task :system:copyReleaseJniLibsProjectAndLocalJars
+> Task :system:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :migration:generateReleaseLintModel
+> Task :system:extractReleaseAnnotations FROM-CACHE
+> Task :migration:extractReleaseAnnotations FROM-CACHE
+> Task :system:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :migration:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :system:mergeReleaseJavaResource
+> Task :migration:mergeReleaseJavaResource
+> Task :fixture:validateSigningDebug
+> Task :system:syncReleaseLibJars FROM-CACHE
+> Task :migration:syncReleaseLibJars FROM-CACHE
+> Task :fixture:writeDebugAppMetadata
+> Task :system:bundleReleaseLocalLintAar
+> Task :migration:bundleReleaseLocalLintAar
+> Task :system:writeReleaseLintModelMetadata
+> Task :root:lintVitalAnalyzeJvmMain FROM-CACHE
+> Task :migration:lintVitalAnalyzeRelease FROM-CACHE
+> Task :system:lintVitalAnalyzeRelease FROM-CACHE
+> Task :fixture:writeDebugSigningConfigVersions
+> Task :domain:generateLintVitalJvmMainLintModel
+> Task :migration:generateReleaseLintVitalModel
+> Task :root:generateLintVitalJvmMainLintModel
+> Task :system:generateReleaseLintVitalModel
+> Task :fixture:preReleaseBuild UP-TO-DATE
+> Task :fixture:mergeReleaseJniLibFolders
+> Task :fixture:mergeReleaseNativeLibs NO-SOURCE
+> Task :fixture:stripReleaseDebugSymbols NO-SOURCE
+> Task :fixture:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :fixture:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :fixture:checkReleaseDuplicateClasses
+> Task :app:extractProguardFiles
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :fixture:buildKotlinToolingMetadata
+> Task :fixture:checkReleaseAarMetadata
+> Task :fixture:generateReleaseResValues FROM-CACHE
+> Task :fixture:mapReleaseSourceSetPaths
+> Task :app:mergeDebugAssets
+> Task :fixture:generateReleaseResources FROM-CACHE
+> Task :app:compressDebugAssets FROM-CACHE
+> Task :app:desugarDebugFileDependencies FROM-CACHE
+> Task :fixture:mergeReleaseResources FROM-CACHE
+> Task :fixture:packageReleaseResources FROM-CACHE
+> Task :fixture:parseReleaseLocalResources FROM-CACHE
+> Task :fixture:createReleaseCompatibleScreenManifests
+> Task :fixture:extractDeepLinksRelease FROM-CACHE
+> Task :fixture:processReleaseMainManifest FROM-CACHE
+> Task :fixture:processReleaseManifest FROM-CACHE
+> Task :fixture:processReleaseManifestForPackage FROM-CACHE
+> Task :fixture:processReleaseResources FROM-CACHE
+> Task :fixture:compileReleaseKotlin FROM-CACHE
+> Task :fixture:javaPreCompileRelease FROM-CACHE
+> Task :fixture:compileReleaseJavaWithJavac NO-SOURCE
+> Task :fixture:dexBuilderRelease FROM-CACHE
+> Task :fixture:desugarReleaseFileDependencies FROM-CACHE
+> Task :fixture:mergeReleaseStartupProfile UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses
+> Task :fixture:mergeExtDexRelease FROM-CACHE
+> Task :fixture:mergeDexRelease FROM-CACHE
+> Task :fixture:packageDebug
+> Task :fixture:createDebugApkListingFileRedirect
+> Task :fixture:assembleDebug
+> Task :fixture:mergeReleaseArtProfile
+> Task :fixture:mergeReleaseShaders
+> Task :fixture:compileReleaseShaders NO-SOURCE
+> Task :fixture:generateReleaseAssets UP-TO-DATE
+> Task :fixture:mergeReleaseAssets
+> Task :app:mergeExtDexDebug FROM-CACHE
+> Task :fixture:mergeReleaseGlobalSynthetics
+> Task :fixture:compressReleaseAssets
+> Task :app:mergeLibDexDebug FROM-CACHE
+> Task :fixture:compileReleaseArtProfile
+> Task :app:mergeDebugJniLibFolders
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeDebugNativeLibs
+> Task :app:mergeReleaseJniLibFolders
+> Task :fixture:extractReleaseVersionControlInfo
+> Task :fixture:extractProguardFiles
+> Task :app:buildKotlinToolingMetadata
+> Task :app:mergeReleaseNativeLibs
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :fixture:generateReleaseLintVitalReportModel
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:extractReleaseNativeSymbolTables FROM-CACHE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseAarMetadata
+> Task :app:generateReleaseResValues FROM-CACHE
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources FROM-CACHE
+> Task :fixture:processReleaseJavaRes
+> Task :fixture:mergeReleaseJavaResource
+> Task :fixture:optimizeReleaseResources
+> Task :app:mergeReleaseResources FROM-CACHE
+> Task :app:packageReleaseResources FROM-CACHE
+> Task :app:parseReleaseLocalResources FROM-CACHE
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease FROM-CACHE
+> Task :app:processReleaseMainManifest FROM-CACHE
+> Task :app:processReleaseManifest FROM-CACHE
+> Task :app:processReleaseManifestForPackage FROM-CACHE
+> Task :fixture:collectReleaseDependencies
+> Task :app:processReleaseResources FROM-CACHE
+> Task :fixture:sdkReleaseDependencyData
+> Task :app:javaPreCompileRelease FROM-CACHE
+> Task :app:mergeReleaseArtProfile
+> Task :app:mergeReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets FROM-CACHE
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :fixture:writeReleaseAppMetadata
+> Task :fixture:writeReleaseSigningConfigVersions
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:generateDebugAndroidTestResources
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:processDebugAndroidTestManifest
+> Task :app:processDebugAndroidTestResources
+> Task :app:javaPreCompileDebugAndroidTest FROM-CACHE
+> Task :app:mergeDebugAndroidTestShaders
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets FROM-CACHE
+> Task :app:desugarDebugAndroidTestFileDependencies FROM-CACHE
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :fixture:lintVitalAnalyzeRelease
+> Task :fixture:lintVitalReportRelease
+> Task :fixture:lintVitalRelease
+> Task :fixture:packageRelease
+> Task :fixture:createReleaseApkListingFileRedirect
+> Task :fixture:assembleRelease
+> Task :app:mergeLibDexDebugAndroidTest FROM-CACHE
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:compileReleaseKotlin
+> Task :app:generateDebugLintReportModel
+> Task :app:generateDebugAndroidTestLintModel
+> Task :app:generateDebugUnitTestLintModel
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics FROM-CACHE
+> Task :app:processDebugJavaRes
+> Task :app:mergeProjectDexDebug
+> Task :app:compileReleaseJavaWithJavac NO-SOURCE
+> Task :app:mergeDebugJavaResource
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:mergeReleaseGeneratedProguardFiles
+> Task :app:processReleaseJavaRes
+> Task :app:expandReleaseArtProfileWildcards
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:mergeReleaseJavaResource
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebugUnitTest
+> Task :app:compileDebugAndroidTestKotlin
+> Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeDebugAndroidTestGlobalSynthetics FROM-CACHE
+> Task :app:processDebugAndroidTestJavaRes
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:lintVitalReportRelease
+> Task :app:lintVitalRelease
+> Task :app:lintAnalyzeDebug
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///Users/wolf/SoftwareProjects/multiusers-project/MultiUsers/app/build/reports/lint-results-debug.html
+
+> Task :app:lintDebug
+> Task :app:minifyReleaseWithR8
+> Task :app:convertShrunkResourcesToBinaryRelease
+> Task :app:optimizeReleaseResources
+> Task :app:compileReleaseArtProfile
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+
+BUILD SUCCESSFUL in 31s
+378 actionable tasks: 212 executed, 142 from cache, 24 up-to-date
+GRADLE_EXIT=0
