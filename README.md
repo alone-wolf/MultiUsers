@@ -20,6 +20,16 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 Windows使用gradlew.bat，Android Studio直接打开根目录。Debug签名由构建机器生成，换机器构建升级时可能需统一debug keystore或卸载旧包。
 
+### Android Studio 的 Gradle JDK
+
+Android Studio 自带的 JBR 随版本升级（2026.1 内置 **JBR 25**），而 Gradle 8.13 只支持 Java 1.8–23：IDE 的 Gradle JDK 若落在内置 JBR 上，同步会直接失败（*Incompatible Gradle JVM version … supports Java versions between 1.8 and 23*）。
+
+本仓库用 `gradle/gradle-daemon-jvm.properties`（`toolchainVersion=21`）把 **Gradle 守护进程**钉在 Java 21：Gradle 会自行挑选本机已安装的 JDK 21，即使启动 Gradle 的 JVM 是 25 也能正常同步与构建（已在 JBR 25 启动、daemon 实际运行于 Corretto 21 的条件下验证全量构建通过）。
+
+若个别 IDE 版本仍报错，改为手动指定：Settings → Build, Execution, Deployment → Build Tools → Gradle → **Gradle JDK** → 选择本机 JDK 21（本机注册名为 `corretto-21`）。
+
+不要用 `gradle.properties` 里的 `org.gradle.java.home` 写死 JDK 绝对路径——该文件纳入版本管理，写死会使其他机器无法构建。
+
 ## 代码风格
 
 全部 Kotlin 源码为 ktlint 1.8.0 官方风格（4 空格缩进、禁用通配导入、行长 140），配置见 `.editorconfig`；Compose 组合函数按 Compose 官方约定保留 PascalCase（通过 `ktlint_function_naming_ignore_when_annotated_with` 放行）。当前状态 0 issues，记录见 evidence/ktlint.txt。
